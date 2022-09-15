@@ -22,7 +22,7 @@ function App() {
 			setJoke(joke);
 		} catch (err) {
 			setJoke({
-				joke: "I'm sorry, we weren't able to find any jokes today. Please try again later.",
+				joke: "I'm sorry, we weren't able to find any jokes. Please try again.",
 				id: null,
 			});
 			console.log(err);
@@ -34,12 +34,14 @@ function App() {
 	}, []);
 
 	return (
-		<div className="App">
-			<Button appearance="secondary">Login</Button>
-			<Button appearance="accent">Sign Up</Button>
-			<div className="w-100 min-h-screen max-h-screen flex items-center justify-center">
+		<div className="App min-h-screen max-h-full h-full grid p-4">
+			<div className="col-span-6">
+				<Button appearance="secondary">Login</Button>
+				<Button appearance="accent">Sign Up</Button>
+			</div>
+			<div className="col-start-2 col-span-4 row-start-2">
 				<Card
-					title="Get Your Dad Jokes"
+					title="Your Daily Dose of Dad (Joke)"
 					body={joke}
 					cta="New Joke"
 					ctaClick={getNewJoke}

@@ -6,11 +6,11 @@ function Card({ title, body, cta, ctaClick, className }) {
 
 	return (
 		<div className={classNames}>
-			<h1 className="text-2xl text-cyan-700 m-3">{title}</h1>
+			<h1 className="text-3xl font-semibold text-cyan-700 m-3">{title}</h1>
 
-			<p className=" text-lg m-3">{body.joke}</p>
+			<p className=" text-xl m-3">{body.joke}</p>
 			<div className="flex items-center justify-center">
-				<Star className="hover:fill-yellow-300 stroke-gray-600 transition mr-3" />
+				<Star className="hover:fill-yellow-300 stroke-gray-500 hover:stroke-0 transition mr-3" />
 				<Button appearance="primary" onClick={ctaClick} className="text-lg">
 					{cta}
 				</Button>

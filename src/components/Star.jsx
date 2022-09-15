@@ -1,11 +1,17 @@
 function Star({ className }) {
 	function favoriteJoke(e) {
 		// if user is signed in, change the color and add the id to their favorite jokes db
-		document.querySelector('#star').classList.toggle('fill-yellow-300');
+		const star = document.querySelector('#star');
+		star.classList.toggle('fill-yellow-300');
+		star.classList.toggle('stroke-gray-500');
+
 		// if user is not signed in, grab the joke id and direct them to the sign up screen
 	}
 	return (
-		<button onClick={(e) => favoriteJoke(e)}>
+		<button
+			className="focus:outline-8 focus:outline-offset-2 focus:outline-orange-700"
+			onClick={(e) => favoriteJoke(e)}
+		>
 			<svg
 				width="32"
 				height="28"
