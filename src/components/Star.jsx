@@ -4,6 +4,7 @@ function Star({ className }) {
 		const star = document.querySelector('#star');
 		star.classList.toggle('fill-yellow-300');
 		star.classList.toggle('stroke-gray-500');
+		console.log("Sorry, this doesn't do anything yet.");
 
 		// if user is not signed in, grab the joke id and direct them to the sign up screen
 	}

@@ -15,7 +15,13 @@ const fetchConfig = {
 function App() {
 	const [joke, setJoke] = useState({});
 
+	// Hiding the login and sign up buttons until I've integrated Firebase.
+	const user = false;
 	async function getNewJoke() {
+		const star = document.querySelector('#star');
+		star.classList.remove('fill-yellow-300');
+		star.classList.remove('stroke-gray-500');
+		star.classList.add('stroke-gray-500');
 		try {
 			const res = await fetch('https://icanhazdadjoke.com/', fetchConfig);
 			const joke = await res.json();
@@ -35,11 +41,14 @@ function App() {
 
 	return (
 		<div className="App min-h-screen max-h-full h-full grid p-4">
-			<div className="col-span-6">
-				<Button appearance="secondary">Login</Button>
-				<Button appearance="accent">Sign Up</Button>
-			</div>
-			<div className="col-start-2 col-span-4 row-start-2">
+			{user && (
+				<div className="col-span-6">
+					<Button appearance="secondary">Login</Button>
+					<Button appearance="accent">Sign Up</Button>
+				</div>
+			)}
+
+			<div className="col-start-1 col-span-4 row-start-2">
 				<Card
 					title="Your Daily Dose of Dad (Joke)"
 					body={joke}
