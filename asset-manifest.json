@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/dad-jokes/static/css/main.f3d4aa35.css",
-    "main.js": "/dad-jokes/static/js/main.a2c212df.js",
-    "static/media/background.png": "/dad-jokes/static/media/background.33606c0f9e9b7741711a.png",
-    "index.html": "/dad-jokes/index.html",
-    "main.f3d4aa35.css.map": "/dad-jokes/static/css/main.f3d4aa35.css.map",
-    "main.a2c212df.js.map": "/dad-jokes/static/js/main.a2c212df.js.map"
+    "main.css": "/www.getyourdadjokes.com/static/css/main.fbe448d7.css",
+    "main.js": "/www.getyourdadjokes.com/static/js/main.a2c212df.js",
+    "static/media/background.png": "/www.getyourdadjokes.com/static/media/background.33606c0f9e9b7741711a.png",
+    "index.html": "/www.getyourdadjokes.com/index.html",
+    "main.fbe448d7.css.map": "/www.getyourdadjokes.com/static/css/main.fbe448d7.css.map",
+    "main.a2c212df.js.map": "/www.getyourdadjokes.com/static/js/main.a2c212df.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3d4aa35.css",
+    "static/css/main.fbe448d7.css",
     "static/js/main.a2c212df.js"
   ]
 }
