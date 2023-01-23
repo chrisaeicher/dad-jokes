@@ -28,7 +28,6 @@ function App() {
 				joke: "I'm sorry, we weren't able to find any jokes. Please try again.",
 				id: null,
 			});
-			console.log(err);
 		}
 	}
 
@@ -43,7 +42,7 @@ function App() {
 
 	return (
 		<div className="App min-h-screen max-h-full h-full grid p-4">
-			{viewFavorites === false && (
+			{!viewFavorites && (
 				<>
 					<div className="col-span-6">
 						{/* <Button appearance="secondary">Login</Button>
@@ -81,11 +80,11 @@ function App() {
 						</Button>
 					</div>
 
-					<div className="flex flex-col mx-16 w-10/12 md:w-3/4">
+					<div className="flex flex-col mx-0 col-start-2 col-span-2 row-start-2 md:mx-16">
 						{favorites.map((joke) => {
 							return (
 								<div
-									className="flex items-center bg-white px-8 py-4 border rounded-lg text-cyan-700 text-lg mt-4"
+									className="flex items-center bg-slate-50 px-8 py-4 border rounded-lg text-cyan-700 text-lg mt-4"
 									key={joke.id}
 								>
 									<Star
